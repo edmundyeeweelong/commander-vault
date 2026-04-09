@@ -18,8 +18,9 @@ const FIREBASE_CONFIG = {
 // Initialize Firebase
 let db = null;
 try {
-  const app = initializeApp(firebaseConfig);
+  const app = initializeApp(FIREBASE_CONFIG);
   db = getDatabase(app);
+  console.log("Firebase connected!", db);
 } catch (e) {
   console.warn("Firebase error:", e.message);
 }
