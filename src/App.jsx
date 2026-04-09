@@ -5,7 +5,7 @@ import { getDatabase, ref, onValue, set, update, get } from "firebase/database";
 // ─────────────────────────────────────────────────────────────────────────────
 // 🔥 FIREBASE CONFIG — replace with your own from console.firebase.google.com
 // ─────────────────────────────────────────────────────────────────────────────
-const firebaseConfig = {
+const FIREBASE_CONFIG = {
   apiKey: "AIzaSyD6yhem0tA1BkeZNhCfW3NBrGw5pTOGi3U",
   authDomain: "commander-vault.firebaseapp.com",
   databaseURL: "https://commander-vault-default-rtdb.asia-southeast1.firebasedatabase.app",
