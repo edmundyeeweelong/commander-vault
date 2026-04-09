@@ -16,8 +16,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+let db = null;
+try {
+  const app = initializeApp(firebaseConfig);
+  db = getDatabase(app);
+} catch (e) {
+  console.warn("Firebase error:", e.message);
+}
 
 // ── Scryfall ──────────────────────────────────────────────────────────────────
 async function fetchCommanderCard(name) {
